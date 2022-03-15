@@ -64,11 +64,15 @@ makeSmall(imgElement);
 
 function makeInvisible(domElement) {
 
-    const changeClass = document.querySelector(domElement);
-    changeClass.className = "invisible";
+    // const changeClass = document.querySelector(domElement); *cannot create element inside funciton.
+    domElement.className = "invisible";
     
 }
-makeInvisible("h1");
+//has to become a DOM element here to pass into function
+let headingOne = document.querySelector('h1'); 
+makeInvisible(headingOne);
+
+// Part Three - Creating DOM Elements
 
 function addToList(text) {
     const newListItem = document.createElement("li");
@@ -77,8 +81,6 @@ function addToList(text) {
 }
 const newDomElement = addToList("I choose you..");
 const newDomElement2 = addToList("Eevee!");
-
-// Part Three - Creating DOM Elements
 
 appendsArgs(newDomElement);
 appendsArgs(newDomElement2);
