@@ -64,7 +64,8 @@ makeSmall(imgElement);
 
 function makeInvisible(domElement) {
 
-    // const changeClass = document.querySelector(domElement); *cannot create element inside funciton.
+    // const changeClass = document.querySelector(domElement); 
+    // *cannot create element inside function.
     domElement.className = "invisible";
     
 }
@@ -86,7 +87,7 @@ appendsArgs(newDomElement);
 appendsArgs(newDomElement2);
 
 function newHeader(size, text) {
-    const makeNew = document.createElement("h" + size);
+    const makeNew = document.createElement(`h${size}`);
     makeNew.innerText = text;
     return makeNew
     
